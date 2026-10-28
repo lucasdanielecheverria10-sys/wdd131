@@ -1,15 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Lucas Daniel Gomes Echeverria</title>
+    <meta name="author" content="Lucas Daniel Gomes Echeverria">
+
+    <meta name="description"
+        content="pagina principal para o curso WDD 131 – Fundamentos da Web Dinâmica desenvolvido por Lucas Daniel Gomes Echeverria">
+    <link rel="stylesheet" href="estilos/base.css">
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
 
 <body>
-    <h1>Lucas Daniel Gomes Echeverria</h1>
+    <header>
+        <span id="titulo-curso">
+            WDD 131 – Fundamentos da Web Dinâmica
+        </span>
+        <nav>
+            <ul>
+                <li><a href="https://linkedin.com/in/lucas-daniel-gomes-echeverria-b79881209">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=por&id=p10#p10">Escritura</a>
+                </li>
+                <li><a href="#">Projeto Final</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
 
+        <section class="card">
+            <h2>Sobre mim</h2>
+            <img src="imagens/perfil.jpg" alt="Foto de perfil">
+            <p>Olá! Meu nome é Lucas Daniel Gomes Echeverria. Eu moro em Florianópolies/SC e estou cursando
+                Desenvolvimento Web através da BYU-Pathway.</p>
+        </section>
+
+        <section class="card">
+            <h2>Santa Catarina</h2>
+            <img src="imagens/paisagem.jpg" alt="Paisagem de Santa Catarina">
+            <p>
+                Apresente informações sobre o lugar
+                onde você mora.
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="anoatual"></span> | Lucas Daniel Gomes Echeverria | Santa Catarina</p>
+        <p><span id="ultimaModificacao"></span></p>
+    </footer>
 </body>
 
 </html>
