@@ -12,9 +12,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 3fr 1fr;
@@ -97,8 +96,8 @@ footer {
 }
 
 .card img {
-    width: 200px;
-    height: 200px;
+    width: 65%;
+    height: auto;
 
 }
 
@@ -107,8 +106,10 @@ footer {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--card-color);
     padding-bottom: 0.5rem;
+    text-align: center;
 }
 
 .card p {
-    font-weight: medium;
+    font-weight: 400;
+    text-align: justify
 }
