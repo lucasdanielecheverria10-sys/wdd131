@@ -1,0 +1,138 @@
+/* Estilos base: Mobile First */
+:root {
+    --cor-principal: #006f8a;
+    --cor-secundaria: #005b70;
+    --cor-texto: #222;
+    --cor-fundo: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Sansita", sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4.5rem 1rem 1rem;
+    color: white;
+    background-color: var(--cor-principal);
+}
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+#menu {
+    position: absolute;
+    top: 0.65rem;
+    right: 1rem;
+    border: 0;
+    padding: 0.35rem 0.6rem;
+    color: white;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+}
+
+#menu-principal {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    list-style: none;
+}
+
+#menu-principal.aberto {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+}
+
+nav a:hover,
+nav a:focus {
+    color: #102a32;
+    background-color: #bce8ef;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+main h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--cor-principal);
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    overflow: hidden;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 75%;
+    margin-bottom: 0.75rem;
+    border-radius: 3px;
+}
+
+figcaption {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    color: white;
+    background-color: var(--cor-principal);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p+p {
+    margin-top: 0.35rem;
+}
