@@ -1,5 +1,5 @@
 const input = document.querySelector('#capfav');
-const botao = document.querySelector('#btnAdicionar'); // Seleciona pelo ID para não dar conflito
+const botao = document.querySelector('#btnAdicionar');
 const lista = document.querySelector('ul');
 
 botao.addEventListener('click', function () {
@@ -21,3 +21,4 @@ botao.addEventListener('click', function () {
         input.focus();
     }
 });
+
