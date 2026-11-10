@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Daniel Gomes Echeverria">
+    <meta name="description" content="Conheça Florianópolis, Santa Catarina, Brasil.">
+    <title>Florianópolis - Brasil | Página do País</title>
+    <link rel="stylesheet" href="estilos/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Brasil</h1>
+        <p>Florianópolis, Santa Catarina</p>
+    </header>
+
+    <main>
+        <div class="imagem-principal">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="imagens/imagem-grande.webp" type="image/webp">
+                <source media="(min-width: 768px)" srcset="imagens/imagem-media.webp" type="image/webp">
+                <img src="imagens/imagem-pequena.webp"
+                     alt="Caminho entre palmeiras que leva a uma praia de Florianópolis"
+                     fetchpriority="high">
+            </picture>
+        </div>
+
+        <div class="conteudo">
+            <section class="cartao dados" aria-labelledby="titulo-dados">
+                <h2 id="titulo-dados">Dados do local</h2>
+                <dl>
+                    <div><dt>País:</dt><dd>Brasil</dd></div>
+                    <div><dt>Capital:</dt><dd>Brasília</dd></div>
+                    <div><dt>Estado:</dt><dd>Santa Catarina</dd></div>
+                    <div><dt>Localidade:</dt><dd>Florianópolis</dd></div>
+                    <div><dt>Idioma:</dt><dd>Português</dd></div>
+                    <div><dt>Moeda:</dt><dd>Real (R$)</dd></div>
+                    <div><dt>Continente:</dt><dd>América do Sul</dd></div>
+                </dl>
+            </section>
+
+            <section class="cartao clima" aria-labelledby="titulo-clima">
+                <h2 id="titulo-clima" class="clima-titulo">Clima</h2>
+                <img class="icone-clima-mobile" src="imagens/cloud.svg" alt="" aria-hidden="true">
+                <div class="clima-info">
+                    <p><strong>Temperatura:</strong> <span id="temperatura">8</span> °C</p>
+                    <p><strong>Vento:</strong> <span id="velocidade-vento">10</span> km/h</p>
+                    <p><strong>Sensação térmica:</strong> <span id="sensacao-termica">N/A</span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; <span id="ano-atual"></span> Lucas Daniel Gomes Echeverria | Brasil</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+    </footer>
+</body>
+</html>
