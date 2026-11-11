@@ -21,7 +21,7 @@ body {
     line-height: 1.5;
 }
 
-.cabecalho {
+.titulo {
     background: var(--cor-principal);
     color: #ffffff;
     text-align: center;
@@ -29,11 +29,11 @@ body {
     border-bottom: 5px solid var(--cor-secundaria);
 }
 
-.cabecalho h1 {
+.titulo h1 {
     font-size: 2rem;
 }
 
-.cabecalho p {
+.titulo p {
     font-size: 1rem;
 }
 
@@ -92,7 +92,7 @@ body {
     margin: 0.45rem 0;
 }
 
-.rodape {
+footer {
     background: var(--cor-principal);
     color: #ffffff;
     text-align: center;
