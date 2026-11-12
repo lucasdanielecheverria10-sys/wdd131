@@ -10,9 +10,6 @@ if (elementoModificacao) {
     elementoModificacao.textContent = document.lastModified;
 }
 
-// ==========================================
-// 2. Clima: Cálculo da Sensação Térmica
-// ==========================================
 
 /**
  * Calcula o fator de sensação térmica baseando-se na fórmula de Wind Chill.
