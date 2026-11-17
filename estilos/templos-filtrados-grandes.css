@@ -1,0 +1,20 @@
+/* Estilos para telas maiores */
+@media screen and (min-width: 768px) {
+    header { padding: 1rem 2rem; }
+    header h1 { font-size: 2rem; }
+    #menu { display: none; }
+    nav { width: auto; }
+    #menu-principal, #menu-principal.aberto {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0;
+    }
+    nav a { padding: 0.65rem 0.85rem; }
+    main { padding: 2rem; }
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
