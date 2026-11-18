@@ -72,7 +72,6 @@ const templos = [
     }
 ];
 
-// Elementos da página.
 const gridContainer = document.querySelector(".grid");
 const pageTitle = document.querySelector("#galeria");
 const navLinks = document.querySelectorAll("nav a");
@@ -113,7 +112,7 @@ function createTempleCard(templosFiltrados) {
 
     gridContainer.innerHTML = "";
 
-    templosFiltrados.forEach((templo) => {
+    templosFiltrados.forEach((templo, index) => {
         const card = document.createElement("section");
         card.classList.add("temple-card");
 
@@ -140,9 +139,15 @@ function createTempleCard(templosFiltrados) {
         const imagem = document.createElement("img");
         imagem.src = templo.urlDaImagem;
         imagem.alt = `Templo de ${templo.nomeDoTemplo}`;
-        imagem.loading = "lazy";
         imagem.width = 400;
         imagem.height = 250;
+
+        // Carrega as primeiras imagens imediatamente (melhora o LCP) e aplica lazy loading nas demais.
+        if (index > 1) {
+            imagem.loading = "lazy";
+        } else {
+            imagem.fetchPriority = "high";
+        }
 
         card.append(nome, localizacao, data, area, imagem);
         gridContainer.appendChild(card);
