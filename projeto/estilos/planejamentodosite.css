@@ -1,0 +1,245 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #245b45;
+    --cor-secundaria: #dce9df;
+    --cor-destaque: #e6a84b;
+    --cor-texto: #26332c;
+    --cor-fundo: #f7f8f5;
+    --cor-branco: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* Cabeçalho e navegação */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 5%;
+    background-color: var(--cor-principal);
+}
+
+header>a {
+    display: inline-flex;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    width: 65px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-principal);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Banner principal */
+.principal {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    border-radius: 12px;
+}
+
+.principal h1 {
+    margin-bottom: 1.5rem;
+    color: var(--cor-principal);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.principal img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    margin: 0 auto 1.5rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.principal p {
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+}
+
+.principal a,
+.trilha-card a {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: var(--cor-branco);
+    background-color: var(--cor-principal);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.principal a:hover,
+.principal a:focus,
+.trilha-card a:hover,
+.trilha-card a:focus {
+    background-color: #173d2e;
+}
+
+/* Apresentação */
+section[aria-labelledby="titulo-apresentacao"] {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+/* Cartões de trilhas */
+.trilhas-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.trilha-card {
+    overflow: hidden;
+    padding-bottom: 1.25rem;
+    background-color: var(--cor-branco);
+    border: 1px solid #d9dfd9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.trilha-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.trilha-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--cor-principal);
+}
+
+.trilha-card p {
+    padding: 0 1rem;
+}
+
+.trilha-card a {
+    margin-top: 0.25rem;
+}
+
+/* Dicas de segurança */
+#seguranca {
+    padding: 2rem;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+}
+
+#seguranca ul {
+    max-width: 750px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+}
+
+#seguranca li {
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    padding: 1.5rem 1rem;
+    color: var(--cor-branco);
+    background-color: var(--cor-principal);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.35rem;
+}
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .trilhas-container {
+        grid-template-columns: 1fr;
+    }
+
+    .trilha-card img {
+        height: 220px;
+    }
+
+    .principal {
+        padding: 2rem 1rem;
+    }
+
+    #seguranca {
+        padding: 1.5rem;
+    }
+}
