@@ -9,6 +9,7 @@
         content="Conheça as principais trilhas de Florianópolis, descubra seus níveis de dificuldade e confira dicas para fazer caminhadas com segurança.">
     <title>Guia de Trilhas de Florianópolis</title>
     <link rel="stylesheet" href="estilos/planejamentodosite.css">
+    <script src="scripts/planejamentodosite.js" defer></script>
 </head>
 
 <body>
@@ -32,6 +33,57 @@
             <img src="images/trilha.jpg" alt="Paisagem natural de uma trilha em Florianópolis">
             <p>Descubra caminhos, paisagens e experiências ao ar livre na Ilha da Magia.</p>
             <a href="trilhas.html">Conheça as trilhas</a>
+            <form method="get" action="avaliacao.html">
+
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                </select>
+
+                <p>Avaliação (1 a 5):</p>
+                <input type="radio" id="nota1" name="nota" value="1" required>
+                <label for="nota1">1</label>
+
+                <input type="radio" id="nota2" name="nota" value="2">
+                <label for="nota2">2</label>
+
+                <input type="radio" id="nota3" name="nota" value="3">
+                <label for="nota3">3</label>
+
+                <input type="radio" id="nota4" name="nota" value="4">
+                <label for="nota4">4</label>
+
+                <input type="radio" id="nota5" name="nota" value="5">
+                <label for="nota5">5</label>
+
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <p>Interesses:</p>
+                <input type="checkbox" id="check1" name="interesses" value="html">
+                <label for="check1">HTML</label>
+
+                <input type="checkbox" id="check2" name="interesses" value="css">
+                <label for="check2">CSS</label>
+
+                <input type="checkbox" id="check3" name="interesses" value="js">
+                <label for="check3">JavaScript</label>
+
+                <input type="checkbox" id="check4" name="interesses" value="python">
+                <label for="check4">Python</label>
+
+
+                <label for="comentarios">Comentários:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="40"
+                    placeholder="Digite sua mensagem..."></textarea>
+
+
+                <button type="submit">Enviar</button>
+
+            </form>
         </section>
 
         <section aria-labelledby="titulo-apresentacao">
@@ -83,11 +135,8 @@
     </main>
 
     <footer>
-        <p>
-            &copy; Lucas Daniel Gomes Echeverria |
-            Santa Catarina, Brasil.
-        </p>
-
+        <p>&copy;<span id="anoatual"></span> | Lucas Daniel Gomes Echeverria | Santa Catarina</p>
+        <p><span id="ultimaModificacao"></span></p>
     </footer>
 
 
