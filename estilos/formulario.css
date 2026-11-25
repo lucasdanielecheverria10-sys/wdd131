@@ -13,6 +13,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -121,7 +123,7 @@ main {
     padding: .7rem;
     color: var(--text);
     background-color: #fff;
-    border: 1px solid #8d8291;
+    border: 1px solid #918282;
     border-radius: 5px;
     font: inherit;
 }
@@ -149,33 +151,62 @@ main {
     margin: .55rem 0;
 }
 
+
+/* use reverse flexbox to take advantage of flex-direction: reverse */
 .star-rating {
     display: flex;
+    align-items: center;
+    width: 340px;
     flex-direction: row-reverse;
-    justify-content: flex-end;
-    gap: .25rem;
-    padding: .4rem 0;
+    justify-content: space-between;
+    margin: 40px auto;
+    position: relative;
 }
 
+/* hide the inputs */
 .star-rating input {
+    display: none;
+}
+
+/* set properties of all labels */
+.star-rating>label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: orange;
+}
+
+/* give label a hover state */
+.star-rating label:hover {
+    color: #ff6969;
+    transition: 0.2s ease;
+}
+
+.star-rating label:active::before {
+    transform: scale(1.1);
+}
+
+.star-rating label::before {
+    content: '\2606';
     position: absolute;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
+    top: 0px;
+    line-height: 26px;
 }
 
-.star-rating label {
-    color: #8a6a19;
-    cursor: pointer;
-    font-size: 2.2rem;
-    line-height: 1;
+/* set full star shape for checked label and those that come after it */
+.star-rating input:checked~label:before {
+    content: '\2605';
 }
 
-.star-rating label:hover,
-.star-rating label:hover~label,
-.star-rating input:checked~label {
-    color: #d99b00;
+@-moz-document url-prefix() {
+    .star-rating input:checked~label:before {
+        font-size: 36px;
+        line-height: 21px;
+    }
 }
+
 
 .star-rating input:focus-visible+label {
     outline: 2px solid var(--accent);
@@ -198,7 +229,7 @@ main {
 
 .fw1 input[type="submit"]:hover,
 .fw1 input[type="submit"]:focus {
-    background-color: #5a245a;
+    background-color: #5a2424;
 }
 
 footer {
